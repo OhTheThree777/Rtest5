@@ -1,0 +1,5 @@
+# Rtest5
+Activity之间的相互跳转
+通过继承AppCompatActivity 来重写一些方法实现一键返回推出 长按返回推出
+还有ActivityCollector中写的关于Activity的一些方法来实现Activity的finish()
+通过打印日志测试生命周期
