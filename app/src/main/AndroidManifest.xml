@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.edu.imnu.ciec.rtest5">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".FirstActivity"
+            android:launchMode="singleTask">
+
+            <!--
+             singleTop栈顶单例    singleTask 栈单例
+             singleInstance 全局单例
+             （不管在哪个栈里面都只有一个会被new
+             无论从那个Task中启动该Activity 时只会创建一个目标Activity，并且会使用一个全新的Task来加载Activity实例
+             使用这种模式加载的Activity总是位于Task栈顶 并且该栈之含此Activity)
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecondActivity"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".ThirdActivity"></activity>
+    </application>
+
+</manifest>
